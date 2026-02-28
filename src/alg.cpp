@@ -12,7 +12,9 @@ return true;
 }
 
 uint64_t nPrime(uint64_t n) {
-int count = 0, i = 2, chislo = 0;
+    uint64_t count = 0;
+    uint64_t i = 2;
+    uint64_t chislo = 0;
 while (count != n) {
     if (checkPrime(i) == 1) {
         chislo = i;
@@ -24,7 +26,7 @@ return chislo;
 }
 
 uint64_t nextPrime(uint64_t value) {
-    int i = value;
+    uint64_t i = value;
     do
         i++;
     while (checkPrime(i) != 1);
@@ -32,8 +34,8 @@ uint64_t nextPrime(uint64_t value) {
 }
 
 uint64_t sumPrime(uint64_t hbound) {
-    int sum = 0;
-    for (int i = 2; i < hbound; i++) {
+    uint64_t sum = 0;
+    for (uint64_t i = 2; i < hbound; i++) {
         if (checkPrime(i) == 1)
             sum += i;
     }
@@ -41,8 +43,8 @@ uint64_t sumPrime(uint64_t hbound) {
 }
 
 uint64_t twinPrimes(uint64_t lbound, uint64_t hbound) {
-    int count = 0;
-    for (int i = lbound; i < hbound - 2; i++) {
+    uint64_t count = 0;
+    for (uint64_t i = lbound; i < hbound - 2; i++) {
         if (checkPrime(i) && checkPrime(i + 2))
             count++;
     }
