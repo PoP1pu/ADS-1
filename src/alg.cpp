@@ -27,8 +27,9 @@ return chislo;
 
 uint64_t nextPrime(uint64_t value) {
     uint64_t i = value;
-    do {i++;}
-    while (checkPrime(i) != 1);
+    do {
+        i++;
+       } while (checkPrime(i) != 1);
     return i;
 }
 
